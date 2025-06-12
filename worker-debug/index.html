@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      function dbgMain() {
+        debugger;
+      }
+      const worker = new Worker("worker.js");
+      function dbgWorker() {
+        worker.postMessage("hi");
+      }
+    </script>
+    <button onclick="dbgMain()">
+      Debug the main thread
+    </button>
+    <button onclick="dbgWorker()">
+      Debug the worker thread
+    </button>
+  </head>
+  <body>
+  </body>
+</html>

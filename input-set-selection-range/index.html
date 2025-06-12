@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function setSelection() {
+        input.setSelectionRange(1, 4);
+      }
+      function onInput() {
+        output.innerText += input.value + "\n";
+        input.value = "[***]";
+        setSelection();
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input" type="text" value="[***]" onfocus="setSelection()" oninput="onInput()"/>
+    <br/>
+    Received values:
+    <pre id="output"></pre>
+  </body>
+</html>
