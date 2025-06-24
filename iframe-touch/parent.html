@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<iframe src="./child.html"></iframe>
+<script>
+for (const type of ["mousedown", "pointerdown", "touchstart"]) {
+  document.addEventListener(type, ev => console.log(`${ev.type} from parent`));
+}
+</script>
