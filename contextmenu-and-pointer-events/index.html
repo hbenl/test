@@ -1,0 +1,11 @@
+<meta name="viewport" content="width=device-width">
+<h1>pointerdown/up and contextmenu events:</h1>
+<div id="out"></div>
+<script>
+const out = document.getElementById("out");
+for (const type of ["pointerdown", "pointerup", "contextmenu"]) {
+  document.addEventListener(type, ev => {
+    out.innerText += `${ev.type}\n`;
+  });
+}
+</script>
