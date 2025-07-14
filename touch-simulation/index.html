@@ -1,0 +1,14 @@
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<script>
+for (const type of ["mousedown", "mouseup",
+                    "touchstart", "touchend",
+                    "pointerdown", "pointerup",
+                    "click", "dblclick", "contextmenu"]) {
+  document.addEventListener(type, ev => {
+    console.log(ev.type);
+    if (ev.type === "contextmenu") {
+      ev.preventDefault();
+    }
+  });
+}
+</script>
