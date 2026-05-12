@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      function pause() {
+        worker.postMessage(null);
+        debugger;
+      }
+      const worker = new Worker("worker.js");
+    </script>
+    <button onclick="pause()">
+      Pause the main and worker threads
+    </button>
+  </head>
+  <body>
+  </body>
+</html>
