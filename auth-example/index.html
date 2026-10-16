@@ -1,0 +1,12 @@
+<button id="loginBtn">Login</button>
+<button id="rootTokenBtn">Root token</button>
+<button id="tokenBtn">Token</button>
+<script type="module">
+import { login, getRootToken, getToken } from './index.js';
+loginBtn.onclick = login;
+rootTokenBtn.onclick = async () => { console.log(await getRootToken()); }
+tokenBtn.onclick = async () => {
+  console.log(await getToken("My API"));
+  //TODO send request to /test with tokens in Authorization header
+}
+</script>
